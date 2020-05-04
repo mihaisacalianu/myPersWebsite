@@ -1,0 +1,41 @@
+html{
+background-color: teal;
+margin: 0;
+color: white;
+font-family: 'Indie Flower', cursive;
+
+}
+#title{
+    text-align: center;
+}
+nav{
+    color:white;
+    text-decoration: none;
+   text-align: center;
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    padding: 4px;
+    margin: 4px;
+}
+a:link{
+    color:white;
+    text-decoration: none;
+}
+a:visited{
+    color:white;
+    text-decoration: none;
+}
+a:active{
+    color:white;
+    text-decoration: none;
+}
+a:hover{
+    color:red;
+    text-decoration: none;
+}
