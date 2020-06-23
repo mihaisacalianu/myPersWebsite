@@ -1,41 +1,502 @@
-html{
-background-color: teal;
-margin: 0;
-color: white;
-font-family: 'Indie Flower', cursive;
+:root {
+  --burntSienna: #ee6c4d;
+  --lightCyan: #e0fbfc;
+  --gunMetal: #293241;
+  --white: #ffff;
+  --azure: #ecf8f8;
+  --letterSpacing: 0.3rem;
+  --lineSpacing: 1.5rem;
+}
 
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-#title{
-    text-align: center;
+
+/* Global Styles */
+
+html {
+  background-color: var(--azure);
+  color: var(--gunMetal);
+  font-family: "Indie Flower", cursive;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  line-height: var(--lineSpacing);
+  min-width: 670px;
 }
-nav{
-    color:white;
-    text-decoration: none;
-   text-align: center;
+
+.title {
+  text-transform: capitalize;
+  font-size: 2rem;
+  letter-spacing: var(--letterSpacing);
+  width: 600px;
+  height: auto;
+  padding: 1rem;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+  background: var(--burntSienna);
+  color: var(--lightCyan);
+  border: 10px solid var(--gunMetal);
 }
-nav ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+
+.subtitle {
+  text-decoration: underline;
+  font-size: 1.5rem;
+  columns: var(--burntSienna);
+  margin: 3rem 0;
+  text-transform: capitalize;
 }
+
+.time-period {
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+  background: var(--burntSienna);
+  color: var(--lightCyan);
+  text-align: center;
+  border: 4px solid var(--gunMetal);
+  margin: 1rem;
+}
+
+.sticky {
+  position: fixed;
+  top: 10%;
+  width: 100%;
+  z-index: 4;
+}
+
+/* end of Global Styles */
+
+header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.header-banner {
+  background-image: url("../images/header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+.header-content-title {
+  text-align: center;
+  z-index: 2;
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  color: var(--gunMetal);
+  font-size: 2.5rem;
+  width: 100%;
+}
+
+.header-content-subtitle {
+  text-align: center;
+  line-height: 3rem;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  color: var(--gunMetal);
+  font-size: 2.5rem;
+  width: 30%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 2rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.header-content-subtitle .linkedin {
+  position: absolute;
+  left: 65%;
+  top: 60%;
+}
+
+.header-content-subtitle .facebook {
+  position: absolute;
+  left: 55%;
+  top: 60%;
+}
+
+.header-content-subtitle a:hover {
+  color: var(--burntSienna);
+}
+
+.header-content-navBtn {
+  font-size: 3rem;
+  z-index: 2;
+  color: var(--gunMetal);
+  border-radius: 5px;
+  padding: 0.1rem 0.4rem;
+  text-transform: capitalize;
+  font-family: "Indie Flower", cursive;
+  font-weight: bolder;
+  letter-spacing: 0.2rem;
+  position: absolute;
+  top: 10%;
+  left: 90%;
+}
+
+.header-content-navBtn:hover {
+  color: var(--burntSienna);
+}
+
+.header-nav {
+  background: var(--burntSienna);
+  color: var(--burntSienna) !important;
+  text-decoration: none;
+  text-align: center;
+  z-index: 3;
+  font-size: 2rem;
+  font-weight: bolder;
+  margin: 0 auto;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0%;
+  left: 0%;
+  transform: translate(-100%);
+}
+
+.show-navBtn {
+  transform: translate(0);
+}
+
+main {
+  margin: 0 auto;
+  width: 70%;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 nav ul li {
-    display: inline;
-    padding: 4px;
-    margin: 4px;
+  display: inline;
+  padding: 4px;
+  margin: 4px;
 }
-a:link{
-    color:white;
-    text-decoration: none;
+
+a:link {
+  color: var(--gunMetal);
+  text-decoration: none;
 }
-a:visited{
-    color:white;
-    text-decoration: none;
+
+a:visited {
+  color: var(--gunMetal);
+  text-decoration: none;
 }
-a:active{
-    color:white;
-    text-decoration: none;
+
+a:active {
+  color: var(--gunMetal);
+  text-decoration: none;
 }
-a:hover{
-    color:red;
-    text-decoration: none;
+
+a:hover {
+  color: var(--azure);
+  text-decoration: none;
 }
+
+@media screen and (max-width: 768px) {
+  .header-content-title {
+    line-height: 4rem;
+  }
+  .header-content-subtitle {
+    margin-top: 3rem;
+    width: auto;
+    line-height: 3rem;
+  }
+  .header-content-subtitle a {
+    justify-content: space-evenly;
+  }
+}
+
+/* Profile section */
+
+.profile {
+  margin: 0 auto;
+  min-height: 100vh;
+  margin-top: 4rem;
+}
+
+#profile {
+  height: 100px;
+}
+
+.profile-content {
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.profile-content-img img {
+  overflow: hidden;
+  width: 100%;
+  height: 400px;
+}
+
+.profile-content-img {
+  margin: 0 auto;
+  margin-top: 3rem;
+  width: 100%;
+  height: 400px;
+}
+
+.item-1 {
+  grid-area: one;
+}
+
+.item-2 {
+  grid-area: two;
+}
+
+.item-3 {
+  grid-area: three;
+}
+
+.item-4 {
+  grid-area: four;
+}
+
+.item-5 {
+  grid-area: five;
+}
+
+.item-6 {
+  grid-area: six;
+}
+
+.item-7 {
+  grid-area: seven;
+}
+
+.item-8 {
+  grid-area: eight;
+}
+
+.item-9 {
+  grid-area: nine;
+}
+
+/* end of Profile section */
+
+/* Skills Section */
+
+.skills {
+  margin: 0 auto;
+}
+
+#skills {
+  height: 100px;
+}
+
+/* .skills-title {
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+} */
+
+.skills-programming ul {
+  margin-bottom: 2rem;
+}
+
+.skills-table {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  row-gap: 1rem;
+  column-gap: 10rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.onLineTHTML {
+  border: 2px solid var(--gunMetal);
+  height: 1.5rem;
+  width: 60%;
+  background: var(--burntSienna);
+}
+
+.onLineTCSS {
+  border: 2px solid var(--gunMetal);
+  height: 1.5rem;
+  width: 60%;
+  background: var(--burntSienna);
+}
+
+.onLineTJAVASCRIPT {
+  border: 2px solid var(--gunMetal);
+  height: 1.5rem;
+  width: 40%;
+  background: var(--burntSienna);
+}
+
+.onLineTJAVA {
+  border: 2px solid var(--gunMetal);
+  height: 1.5rem;
+  width: 47%;
+  background: var(--burntSienna);
+}
+
+.onLineTPHP {
+  border: 2px solid var(--gunMetal);
+  height: 1.5rem;
+  width: 40%;
+  background: var(--burntSienna);
+}
+
+.onLineTPYTHON {
+  border: 2px solid var(--gunMetal);
+  height: 1.5rem;
+  width: 40%;
+  background: var(--burntSienna);
+}
+
+.onLineTRNMQ {
+  border: 2px solid var(--gunMetal);
+  height: 1.5rem;
+  width: 20%;
+  background: var(--burntSienna);
+}
+
+.onLineTGIT {
+  border: 2px solid var(--gunMetal);
+  height: 1.5rem;
+  width: 40%;
+  background: var(--burntSienna);
+}
+
+.onLineTBASH {
+  border: 2px solid var(--gunMetal);
+  height: 1.5rem;
+  width: 40%;
+  background: var(--burntSienna);
+}
+
+/* end of Skills Section */
+
+/* Education section */
+
+.education {
+  margin-top: 10rem;
+  height: 100vh;
+}
+
+#education {
+  height: 100px;
+}
+
+.education-title {
+  margin-bottom: 5rem;
+}
+
+.education-entry {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  column-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.education-entry-description {
+  line-height: 1rem;
+}
+
+@media screen and(min-width: 1000px) {
+  .education-entry {
+    column-gap: 5rem;
+  }
+}
+
+/* end of Education section */
+
+/* Portofolio section */
+
+.portofolio {
+  margin-top: 10rem;
+}
+
+#portofolio {
+  height: 100px;
+}
+
+.portofolio-title {
+  margin-bottom: 5rem;
+}
+
+/* end of Portofolio section */
+
+/* Work Experience section */
+
+.experience {
+  margin-top: 10rem;
+  height: 100vh;
+}
+
+#experience {
+  height: 100px;
+}
+
+.experience-title {
+  margin-bottom: 5rem;
+}
+
+.experience-item {
+  margin: 2rem;
+}
+
+.experience-item-description ul li {
+  margin-left: 1rem;
+  position: relative;
+  left: 5%;
+}
+
+.experience-item-description p {
+  margin-bottom: 1rem;
+}
+
+.experience-item-title {
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.experience-item-heading {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  column-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* end of Work Experience section */
+
+/* Interests section */
+
+.interests {
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+}
+
+#interests {
+  height: 100px;
+}
+
+.interests-title {
+  margin-bottom: 5rem;
+}
+
+/* end of Interests section */
